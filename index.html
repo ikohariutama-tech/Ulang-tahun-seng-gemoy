@@ -3,391 +3,658 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Selamat Ulang Tahun Gemoy ❤️</title>
 
 <style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
-    color: white;
-    text-align: center;
-    overflow-x: hidden;
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#090313;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* BACKGROUND */
+.page{
+    min-height:100vh;
     background:
-        radial-gradient(circle at top, #5b1b6f, #160b29 55%, #05030b);
+    radial-gradient(circle at 20% 10%,#7c1f70 0%,transparent 30%),
+    radial-gradient(circle at 80% 30%,#35156d 0%,transparent 35%),
+    linear-gradient(180deg,#13051d,#050108);
 }
 
-/* Bintang */
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    background-image:
-        radial-gradient(white 1px, transparent 1px),
-        radial-gradient(#ff9edb 1px, transparent 1px);
-    background-size: 70px 70px, 110px 110px;
-    opacity: .35;
-    z-index: 0;
+/* HERO */
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px 20px;
+    position:relative;
 }
 
-.container {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    max-width: 850px;
-    margin: auto;
-    padding: 35px 18px 60px;
-}
-
-/* Judul */
-h1 {
-    font-size: clamp(35px, 9vw, 75px);
-    color: #fff;
+.hero h1{
+    font-size:clamp(38px,10vw,75px);
+    line-height:1.05;
+    color:#fff;
     text-shadow:
-        0 0 10px #ff4fc3,
-        0 0 25px #ff4fc3,
-        0 0 50px #ff1493;
-    animation: glow 2s infinite alternate;
+    0 0 10px #ff4fc3,
+    0 0 30px #ff1493,
+    0 0 60px #ff1493;
+    animation:glow 2s infinite alternate;
 }
 
-.subtitle {
-    margin-top: 12px;
-    font-size: 20px;
-    color: #ffd7f3;
+.hero h2{
+    margin-top:20px;
+    font-size:clamp(22px,6vw,35px);
+    color:#ffc5eb;
 }
 
-@keyframes glow {
-    from { text-shadow: 0 0 10px #ff4fc3; }
-    to {
-        text-shadow:
-        0 0 15px #ff4fc3,
-        0 0 35px #ff1493,
-        0 0 60px #ff69b4;
+.hero p{
+    margin-top:18px;
+    font-size:18px;
+    color:#ffdff4;
+}
+
+@keyframes glow{
+    from{filter:brightness(1)}
+    to{filter:brightness(1.3)}
+}
+
+/* HEART */
+.big-heart{
+    font-size:80px;
+    margin-bottom:20px;
+    animation:beat 1.2s infinite;
+}
+
+@keyframes beat{
+    0%,100%{transform:scale(1)}
+    50%{transform:scale(1.2)}
+}
+
+/* PHOTO */
+.photo{
+    width:min(86vw,350px);
+    height:430px;
+    margin:35px auto;
+    padding:6px;
+    border-radius:30px;
+    background:linear-gradient(135deg,#ff2fa8,#ffd23f,#a855f7);
+    box-shadow:
+    0 0 20px #ff1493,
+    0 0 50px rgba(255,20,147,.4);
+}
+
+.photo-inner{
+    width:100%;
+    height:100%;
+    border-radius:25px;
+    background:
+    linear-gradient(135deg,#39123f,#170b25);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:25px;
+}
+
+.photo-inner span{
+    color:#ffc9ed;
+    font-size:20px;
+    line-height:1.6;
+}
+
+/* SECTION */
+.section{
+    max-width:850px;
+    margin:auto;
+    padding:70px 20px;
+}
+
+/* COMIC PANEL */
+.panel{
+    margin:30px 0;
+    padding:30px 22px;
+    border-radius:25px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.18);
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+    backdrop-filter:blur(10px);
+    position:relative;
+    overflow:hidden;
+}
+
+.panel::before{
+    content:"";
+    position:absolute;
+    width:150px;
+    height:150px;
+    background:#ff1493;
+    filter:blur(80px);
+    opacity:.25;
+    right:-60px;
+    top:-60px;
+}
+
+.panel h2{
+    font-size:30px;
+    color:#ffb7e6;
+    margin-bottom:20px;
+}
+
+.panel p{
+    font-size:18px;
+    line-height:1.9;
+    color:#fff3fb;
+}
+
+/* GAME */
+.game-title{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.games{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:18px;
+}
+
+.game{
+    flex:1;
+    min-width:200px;
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    font-size:21px;
+    font-weight:bold;
+    background:linear-gradient(135deg,#20144d,#791c70);
+    border:1px solid #ff86d8;
+    box-shadow:0 0 25px rgba(255,50,190,.25);
+}
+
+.game small{
+    display:block;
+    margin-top:10px;
+    font-size:14px;
+    color:#ffd5ef;
+    font-weight:normal;
+}
+
+/* LOVE */
+.love-box{
+    text-align:center;
+    padding:45px 25px;
+}
+
+.love-box h2{
+    font-size:35px;
+    color:#ff9ddd;
+}
+
+.love-box p{
+    margin-top:20px;
+}
+
+/* BUTTON */
+.button{
+    display:block;
+    width:max-content;
+    max-width:90%;
+    margin:30px auto;
+    padding:17px 30px;
+    border:0;
+    border-radius:50px;
+    color:white;
+    font-size:17px;
+    font-weight:bold;
+    background:linear-gradient(135deg,#ff1493,#8b2cff);
+    box-shadow:0 0 25px rgba(255,20,147,.6);
+    cursor:pointer;
+}
+
+.button:active{
+    transform:scale(.95);
+}
+
+/* SECRET */
+#secret{
+    display:none;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:60px 20px 80px;
+    color:#ffb9e7;
+}
+
+footer .heart{
+    font-size:35px;
+}
+
+/* FLOATING HEART */
+.floating-heart{
+    position:fixed;
+    bottom:-50px;
+    pointer-events:none;
+    z-index:999;
+    animation:fly linear forwards;
+}
+
+@keyframes fly{
+    0%{
+        transform:translateY(0) scale(.6) rotate(0);
+        opacity:0;
+    }
+
+    15%{
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-110vh) scale(1.4) rotate(360deg);
+        opacity:0;
     }
 }
 
-/* Foto */
-.photo-box {
-    margin: 30px auto;
-    width: min(85vw, 360px);
-    height: 430px;
-    border-radius: 30px;
-    padding: 7px;
-    background: linear-gradient(135deg, #ff4fc3, #ffd700, #9d4edd);
-    box-shadow: 0 0 35px #ff1493;
+/* SCROLL INDICATOR */
+.scroll{
+    margin-top:35px;
+    color:#ffb8e8;
+    animation:bounce 1.5s infinite;
 }
 
-.photo-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 24px;
-    background: #24102e;
-}
-
-/* Kartu */
-.card {
-    margin: 25px auto;
-    padding: 28px 22px;
-    border-radius: 25px;
-    background: rgba(255,255,255,.09);
-    border: 1px solid rgba(255,255,255,.2);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 10px 35px rgba(0,0,0,.3);
-}
-
-.card h2 {
-    color: #ffb7e8;
-    margin-bottom: 18px;
-    font-size: 30px;
-}
-
-.card p {
-    font-size: 18px;
-    line-height: 1.8;
-    color: #fff4fb;
-}
-
-/* Game */
-.games {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.game {
-    padding: 16px 25px;
-    border-radius: 18px;
-    font-weight: bold;
-    background: linear-gradient(135deg, #29215e, #8b2f89);
-    border: 1px solid #ff9ce5;
-    box-shadow: 0 0 18px rgba(255,100,220,.3);
-}
-
-/* Tombol */
-button {
-    border: none;
-    padding: 16px 28px;
-    margin-top: 20px;
-    border-radius: 50px;
-    font-size: 17px;
-    font-weight: bold;
-    color: white;
-    cursor: pointer;
-    background: linear-gradient(135deg, #ff1493, #9d2cff);
-    box-shadow: 0 0 25px rgba(255,20,147,.6);
-}
-
-button:active {
-    transform: scale(.95);
-}
-
-/* Pesan tersembunyi */
-#secret {
-    display: none;
-    margin-top: 25px;
-    animation: muncul 1s ease;
-}
-
-@keyframes muncul {
-    from {
-        opacity: 0;
-        transform: translateY(25px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Hati terbang */
-.heart {
-    position: fixed;
-    bottom: -30px;
-    font-size: 25px;
-    pointer-events: none;
-    animation: terbang linear forwards;
-    z-index: 10;
-}
-
-@keyframes terbang {
-    0% {
-        transform: translateY(0) scale(.7) rotate(0deg);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(-110vh) scale(1.5) rotate(360deg);
-        opacity: 0;
-    }
-}
-
-/* Footer */
-footer {
-    margin-top: 45px;
-    color: #ffc9ed;
-    font-size: 15px;
-}
-
-.love {
-    color: #ff6fcf;
-    font-size: 28px;
+@keyframes bounce{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(10px)}
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="page">
 
-    <h1>SELAMAT ULANG TAHUN GEMOY ❤️</h1>
+<!-- ================= HERO ================= -->
 
-    <div class="subtitle">
-        Untuk Seng tersayang 💕
+<section class="hero">
+
+    <div class="big-heart">❤️</div>
+
+    <h1>
+        SELAMAT<br>
+        ULANG TAHUN GEMOY
+    </h1>
+
+    <h2>Untuk Seng tersayang 💕</h2>
+
+    <p>
+        Dari Iko, untuk seseorang yang sangat berarti.
+    </p>
+
+    <div class="photo">
+        <div class="photo-inner">
+            <span>
+                📸<br><br>
+                FOTO SENG<br><br>
+                akan kita masukkan di sini ❤️
+            </span>
+        </div>
     </div>
 
-    <!-- FOTO -->
-    <div class="photo-box">
-        <!--
-        NANTI FOTO SENG BISA DIGANTI DI SINI.
-        Untuk sementara akan tampil gambar contoh.
-        -->
-        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=700&q=80"
-             alt="Foto Seng">
+    <div class="scroll">
+        ↓ Geser ke bawah ↓
     </div>
 
-    <div class="card">
-        <h2>🎂 Happy Birthday, Seng 🎂</h2>
+</section>
+
+
+<!-- ================= CERITA ================= -->
+
+<section class="section">
+
+    <div class="panel">
+
+        <h2>🎂 Happy Birthday, Seng</h2>
 
         <p>
-            Selamat ulang tahun untuk perempuan yang berhasil
-            membuat hari-hari Iko menjadi lebih berwarna.
-            ❤️
+            Selamat ulang tahun, Seng. ❤️
         </p>
 
         <br>
 
         <p>
-            Semoga di usia yang baru ini,
-            semua harapan Seng satu per satu menjadi kenyataan.
-            Semoga selalu diberikan kesehatan, kebahagiaan,
-            rezeki yang luas dan orang-orang yang tulus menyayangi Seng.
+            Hari ini adalah hari spesial karena seseorang
+            yang gemoy, berharga dan berarti bagi Iko
+            sedang bertambah usia.
         </p>
+
+        <br>
+
+        <p>
+            Iko berharap di usia yang baru ini,
+            Seng selalu diberikan kesehatan,
+            kebahagiaan, rezeki yang luas,
+            dan dikelilingi orang-orang yang tulus.
+        </p>
+
     </div>
 
-    <div class="card">
+
+    <div class="panel">
+
         <h2>💌 Dari Iko Untuk Seng</h2>
 
         <p>
-            Iko mungkin belum bisa memberikan semuanya sekarang,
-            tapi Iko ingin terus berusaha.
+            Iko mungkin bukan orang yang sempurna.
+            Iko juga masih punya banyak kekurangan.
         </p>
 
         <br>
 
         <p>
-            Iko ingin menjadi seseorang yang bisa menemani Seng,
-            bukan hanya ketika semuanya menyenangkan,
-            tetapi juga ketika kehidupan sedang tidak mudah.
+            Tapi satu hal yang Iko tahu...
+            Iko ingin terus berusaha menjadi seseorang
+            yang bisa membuat Seng tersenyum.
         </p>
 
         <br>
 
         <p>
-            Kalau Tuhan mengizinkan,
-            semoga cerita kita tidak berhenti hanya sebagai
-            cerita hari ini.
+            Bukan hanya hari ini.
+            Bukan hanya ketika semuanya mudah.
+            Tapi juga ketika hidup sedang tidak baik-baik saja.
+        </p>
+
+    </div>
+
+
+    <!-- GAME -->
+
+    <div class="panel">
+
+        <h2 class="game-title">🎮 Satu Tim Dengan Seng</h2>
+
+        <div class="games">
+
+            <div class="game">
+                🔥 FREE FIRE
+                <small>
+                    Kalah menang tetap satu squad ❤️
+                </small>
+            </div>
+
+            <div class="game">
+                ⚔️ MOBILE LEGENDS
+                <small>
+                    Jangan sampai Iko ditinggal push rank 😆
+                </small>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="panel">
+
+        <h2>🌎 Harapan Iko</h2>
+
+        <p>
+            Semoga kita bisa terus melewati banyak cerita
+            bersama.
+        </p>
+
+        <br>
+
+        <p>
+            Semoga suatu hari nanti kita bisa melihat
+            tempat-tempat indah bersama,
+            tertawa bersama,
+            membangun kehidupan bersama,
+            dan mewujudkan impian-impian yang sekarang
+            masih menjadi harapan.
+        </p>
+
+        <br>
+
+        <p>
+            Iko ingin suatu hari nanti kita bisa berkata:
+        </p>
+
+        <br>
+
+        <p style="text-align:center;font-size:25px;color:#ffb0e3;">
+            "Ternyata kita berhasil melewati semuanya." ❤️
+        </p>
+
+    </div>
+
+
+    <!-- PERNIKAHAN -->
+
+    <div class="panel love-box">
+
+        <h2>💍 Harapan Terbesar</h2>
+
+        <p>
+            Kalau Tuhan mengizinkan...
+        </p>
+
+        <br>
+
+        <p>
+            semoga cerita kita tidak berhenti
+            hanya sampai di sini.
         </p>
 
         <br>
 
         <p>
             Semoga suatu hari nanti,
-            harapan yang sekarang hanya kita bicarakan
-            bisa benar-benar menjadi kenyataan...
+            Iko bukan hanya menjadi seseorang
+            yang mengucapkan selamat ulang tahun
+            untuk Seng...
         </p>
 
         <br>
 
-        <p class="love">
-            sampai kita menikah. 💍❤️
+        <p style="font-size:28px;color:#ffb0e3;">
+            tetapi menjadi seseorang
+            yang berdiri di samping Seng
+            sampai tua. ❤️
         </p>
-    </div>
-
-    <!-- GAME -->
-    <div class="card">
-        <h2>🎮 Duo Kesayangan</h2>
-
-        <div class="games">
-            <div class="game">🔥 FREE FIRE</div>
-            <div class="game">⚔️ MOBILE LEGENDS</div>
-        </div>
 
         <br>
 
-        <p>
-            Mau kalah atau menang tidak masalah...
-            yang penting tetap satu tim. 😆❤️
+        <p style="font-size:32px;">
+            💍❤️
         </p>
+
     </div>
 
-    <!-- TOMBOL -->
-    <button onclick="showSecret()">
-        💖 Tekan Untuk Pesan Terakhir 💖
+
+    <!-- BUTTON -->
+
+    <button class="button" onclick="openSecret()">
+        💖 Tekan untuk pesan terakhir
     </button>
 
-    <div id="secret" class="card">
-        <h2>💍 Untuk Seng</h2>
 
-        <p>
-            Seng...
-        </p>
+    <!-- SECRET MESSAGE -->
 
-        <br>
+    <div id="secret">
 
-        <p>
-            Terima kasih sudah hadir di kehidupan Iko.
-            Terima kasih untuk setiap perhatian,
-            setiap percakapan,
-            setiap tawa,
-            dan setiap momen yang kita lewati bersama.
-        </p>
+        <div class="panel love-box">
 
-        <br>
+            <h2>Seng... ❤️</h2>
 
-        <p>
-            Iko tidak tahu bagaimana perjalanan kita ke depannya,
-            tapi Iko berharap kita bisa terus berjalan bersama.
-        </p>
+            <p>
+                Terima kasih sudah hadir dalam kehidupan Iko.
+            </p>
 
-        <br>
+            <br>
 
-        <p>
-            Semoga ulang tahun berikutnya,
-            dan ulang tahun setelahnya,
-            Iko masih menjadi orang yang mengucapkan:
-        </p>
+            <p>
+                Terima kasih untuk setiap percakapan,
+                setiap perhatian,
+                setiap tawa,
+                dan setiap momen yang sudah kita lewati.
+            </p>
 
-        <br>
+            <br>
 
-        <h2>
-            "Selamat ulang tahun, Seng." ❤️
-        </h2>
+            <p>
+                Iko tidak tahu bagaimana perjalanan kita
+                nantinya.
+            </p>
 
-        <p>
-            Dan semoga suatu hari nanti,
-            bukan hanya ucapan ulang tahun yang Iko berikan,
-            tetapi juga sebuah cincin
-            dan janji untuk hidup bersama. 💍
-        </p>
+            <br>
 
-        <br>
+            <p>
+                Tapi Iko berharap...
+                selama masih ada kesempatan,
+                kita terus memilih untuk berjalan bersama.
+            </p>
 
-        <p class="love">
-            Iko sayang Seng. ❤️
-        </p>
+            <br>
+
+            <p style="font-size:27px;color:#ffb0e3;">
+                Selamat ulang tahun, Seng. 🎂❤️
+            </p>
+
+            <br>
+
+            <p>
+                Semoga semua doa Seng dikabulkan.
+                Semoga semua impian Seng tercapai.
+                Dan semoga salah satu impian itu...
+            </p>
+
+            <br>
+
+            <p style="font-size:30px;color:#ffb0e3;">
+                adalah kita. 💍
+            </p>
+
+            <br>
+
+            <p style="font-size:30px;">
+                Iko sayang Seng ❤️
+            </p>
+
+        </div>
+
     </div>
 
-    <footer>
-        Dibuat dengan penuh rasa sayang<br>
-        ❤️ Iko → Seng ❤️
-    </footer>
+</section>
+
+
+<footer>
+
+    <div class="heart">
+        ❤️ 💕 ❤️
+    </div>
+
+    <br>
+
+    Dibuat dengan penuh rasa sayang
+
+    <br><br>
+
+    <strong>Iko ❤️ Seng</strong>
+
+</footer>
 
 </div>
 
-<!-- MUSIK -->
-<audio id="music" loop>
-    <source src="music.mp3" type="audio/mpeg">
-</audio>
 
 <script>
 
-/* Musik */
-document.body.addEventListener("click", function() {
-    const music = document.getElementById("music");
+/* ===============================
+   HATI BERTERBANG
+================================ */
 
-    music.play().catch(function() {});
-}, { once: true });
+function createHeart(){
 
+    const heart = document.createElement("div");
 
-/* Pesan terakhir */
-function showSecret() {
-    document.getElementById("secret").style.display = "block";
+    const list = [
+        "❤️",
+        "💕",
+        "💖",
+        "💗",
+        "💓",
+        "💘",
+        "💝"
+    ];
 
-    for (let i = 0; i < 25; i++) {
-        setTimeout(createHeart, i * 120);
-    }
+    heart.className = "floating-heart";
+
+    heart.innerHTML =
+        list[Math.floor(Math.random()*list.length)];
+
+    heart.style.left =
+        Math.random()*100 + "vw";
+
+    heart.style.fontSize =
+        (18 + Math.random()*25) + "px";
+
+    heart.style.animationDuration =
+        (5 + Math.random()*5) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(function(){
+        heart.remove();
+    },10000);
 }
 
+setInterval(createHeart,700);
 
-/* Hati terbang */
-function createHeart() {
 
-    const heart = document
+/* ===============================
+   PESAN TERAKHIR
+================================ */
+
+function openSecret(){
+
+    const secret =
+        document.getElementById("secret");
+
+    secret.style.display="block";
+
+    secret.scrollIntoView({
+        behavior:"smooth"
+    });
+
+    for(let i=0;i<35;i++){
+
+        setTimeout(
+            createHeart,
+            i*100
+        );
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
