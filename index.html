@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Selamat Ulang Tahun Gemoy ❤️</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+    background:
+        radial-gradient(circle at top, #5b1b6f, #160b29 55%, #05030b);
+}
+
+/* Bintang */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+        radial-gradient(white 1px, transparent 1px),
+        radial-gradient(#ff9edb 1px, transparent 1px);
+    background-size: 70px 70px, 110px 110px;
+    opacity: .35;
+    z-index: 0;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 850px;
+    margin: auto;
+    padding: 35px 18px 60px;
+}
+
+/* Judul */
+h1 {
+    font-size: clamp(35px, 9vw, 75px);
+    color: #fff;
+    text-shadow:
+        0 0 10px #ff4fc3,
+        0 0 25px #ff4fc3,
+        0 0 50px #ff1493;
+    animation: glow 2s infinite alternate;
+}
+
+.subtitle {
+    margin-top: 12px;
+    font-size: 20px;
+    color: #ffd7f3;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #ff4fc3; }
+    to {
+        text-shadow:
+        0 0 15px #ff4fc3,
+        0 0 35px #ff1493,
+        0 0 60px #ff69b4;
+    }
+}
+
+/* Foto */
+.photo-box {
+    margin: 30px auto;
+    width: min(85vw, 360px);
+    height: 430px;
+    border-radius: 30px;
+    padding: 7px;
+    background: linear-gradient(135deg, #ff4fc3, #ffd700, #9d4edd);
+    box-shadow: 0 0 35px #ff1493;
+}
+
+.photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+    background: #24102e;
+}
+
+/* Kartu */
+.card {
+    margin: 25px auto;
+    padding: 28px 22px;
+    border-radius: 25px;
+    background: rgba(255,255,255,.09);
+    border: 1px solid rgba(255,255,255,.2);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 35px rgba(0,0,0,.3);
+}
+
+.card h2 {
+    color: #ffb7e8;
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+
+.card p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #fff4fb;
+}
+
+/* Game */
+.games {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.game {
+    padding: 16px 25px;
+    border-radius: 18px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #29215e, #8b2f89);
+    border: 1px solid #ff9ce5;
+    box-shadow: 0 0 18px rgba(255,100,220,.3);
+}
+
+/* Tombol */
+button {
+    border: none;
+    padding: 16px 28px;
+    margin-top: 20px;
+    border-radius: 50px;
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    background: linear-gradient(135deg, #ff1493, #9d2cff);
+    box-shadow: 0 0 25px rgba(255,20,147,.6);
+}
+
+button:active {
+    transform: scale(.95);
+}
+
+/* Pesan tersembunyi */
+#secret {
+    display: none;
+    margin-top: 25px;
+    animation: muncul 1s ease;
+}
+
+@keyframes muncul {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hati terbang */
+.heart {
+    position: fixed;
+    bottom: -30px;
+    font-size: 25px;
+    pointer-events: none;
+    animation: terbang linear forwards;
+    z-index: 10;
+}
+
+@keyframes terbang {
+    0% {
+        transform: translateY(0) scale(.7) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-110vh) scale(1.5) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Footer */
+footer {
+    margin-top: 45px;
+    color: #ffc9ed;
+    font-size: 15px;
+}
+
+.love {
+    color: #ff6fcf;
+    font-size: 28px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>SELAMAT ULANG TAHUN GEMOY ❤️</h1>
+
+    <div class="subtitle">
+        Untuk Seng tersayang 💕
+    </div>
+
+    <!-- FOTO -->
+    <div class="photo-box">
+        <!--
+        NANTI FOTO SENG BISA DIGANTI DI SINI.
+        Untuk sementara akan tampil gambar contoh.
+        -->
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=700&q=80"
+             alt="Foto Seng">
+    </div>
+
+    <div class="card">
+        <h2>🎂 Happy Birthday, Seng 🎂</h2>
+
+        <p>
+            Selamat ulang tahun untuk perempuan yang berhasil
+            membuat hari-hari Iko menjadi lebih berwarna.
+            ❤️
+        </p>
+
+        <br>
+
+        <p>
+            Semoga di usia yang baru ini,
+            semua harapan Seng satu per satu menjadi kenyataan.
+            Semoga selalu diberikan kesehatan, kebahagiaan,
+            rezeki yang luas dan orang-orang yang tulus menyayangi Seng.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>💌 Dari Iko Untuk Seng</h2>
+
+        <p>
+            Iko mungkin belum bisa memberikan semuanya sekarang,
+            tapi Iko ingin terus berusaha.
+        </p>
+
+        <br>
+
+        <p>
+            Iko ingin menjadi seseorang yang bisa menemani Seng,
+            bukan hanya ketika semuanya menyenangkan,
+            tetapi juga ketika kehidupan sedang tidak mudah.
+        </p>
+
+        <br>
+
+        <p>
+            Kalau Tuhan mengizinkan,
+            semoga cerita kita tidak berhenti hanya sebagai
+            cerita hari ini.
+        </p>
+
+        <br>
+
+        <p>
+            Semoga suatu hari nanti,
+            harapan yang sekarang hanya kita bicarakan
+            bisa benar-benar menjadi kenyataan...
+        </p>
+
+        <br>
+
+        <p class="love">
+            sampai kita menikah. 💍❤️
+        </p>
+    </div>
+
+    <!-- GAME -->
+    <div class="card">
+        <h2>🎮 Duo Kesayangan</h2>
+
+        <div class="games">
+            <div class="game">🔥 FREE FIRE</div>
+            <div class="game">⚔️ MOBILE LEGENDS</div>
+        </div>
+
+        <br>
+
+        <p>
+            Mau kalah atau menang tidak masalah...
+            yang penting tetap satu tim. 😆❤️
+        </p>
+    </div>
+
+    <!-- TOMBOL -->
+    <button onclick="showSecret()">
+        💖 Tekan Untuk Pesan Terakhir 💖
+    </button>
+
+    <div id="secret" class="card">
+        <h2>💍 Untuk Seng</h2>
+
+        <p>
+            Seng...
+        </p>
+
+        <br>
+
+        <p>
+            Terima kasih sudah hadir di kehidupan Iko.
+            Terima kasih untuk setiap perhatian,
+            setiap percakapan,
+            setiap tawa,
+            dan setiap momen yang kita lewati bersama.
+        </p>
+
+        <br>
+
+        <p>
+            Iko tidak tahu bagaimana perjalanan kita ke depannya,
+            tapi Iko berharap kita bisa terus berjalan bersama.
+        </p>
+
+        <br>
+
+        <p>
+            Semoga ulang tahun berikutnya,
+            dan ulang tahun setelahnya,
+            Iko masih menjadi orang yang mengucapkan:
+        </p>
+
+        <br>
+
+        <h2>
+            "Selamat ulang tahun, Seng." ❤️
+        </h2>
+
+        <p>
+            Dan semoga suatu hari nanti,
+            bukan hanya ucapan ulang tahun yang Iko berikan,
+            tetapi juga sebuah cincin
+            dan janji untuk hidup bersama. 💍
+        </p>
+
+        <br>
+
+        <p class="love">
+            Iko sayang Seng. ❤️
+        </p>
+    </div>
+
+    <footer>
+        Dibuat dengan penuh rasa sayang<br>
+        ❤️ Iko → Seng ❤️
+    </footer>
+
+</div>
+
+<!-- MUSIK -->
+<audio id="music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+/* Musik */
+document.body.addEventListener("click", function() {
+    const music = document.getElementById("music");
+
+    music.play().catch(function() {});
+}, { once: true });
+
+
+/* Pesan terakhir */
+function showSecret() {
+    document.getElementById("secret").style.display = "block";
+
+    for (let i = 0; i < 25; i++) {
+        setTimeout(createHeart, i * 120);
+    }
+}
+
+
+/* Hati terbang */
+function createHeart() {
+
+    const heart = document
